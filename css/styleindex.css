@@ -1,12 +1,10 @@
-@media (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
-      
-}
-
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .text {
@@ -14,22 +12,37 @@ body {
     color: aliceblue;
     background-color: pink;
     text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
-    background-image: linear-gradient(pink, purple);
-    border-style: outset ;
+    background-image: linear-gradient(to right, pink, purple);
+    border-style: outset;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 50px;
-    padding: center;
-    margin: 300px;
-    
+    padding: 20px 50px;
+    margin: 20px;
+    border-radius: 20px; /* เพิ่มมุมโค้ง */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5); /* เพิ่มเงาสวยๆ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text:hover {
+    transform: scale(1.1); /* ขยายเมื่อ hover */
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.8);
 }
 
 a {
     text-decoration: none;
 }
 
+/* ✅ Responsive Design ให้รองรับทุกขนาดจอ */
+@media (max-width: 768px) {
+    .text {
+        font-size: 30px;
+        padding: 15px 30px;
+    }
+}
 
-
-
-
-  
-    
+@media (max-width: 480px) {
+    .text {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+}
