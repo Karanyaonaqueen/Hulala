@@ -1,20 +1,63 @@
-@media (max-width: 600px) {
-    .container {
-      padding: 10px;
-    }
-}
-
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .og {
     text-align: center;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgb(255, 5, 5), 0 0 25px rgb(255, 56, 56), 0 0 5px rgb(149, 24, 24);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 100px;
-    padding: center;
-    margin: 300px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
+    /* ✨ ทำให้ตัวอักษรเป็นสีขาว */
+    color: white;
+
+    /* 🔥 เอฟเฟกต์ไฟ Glow */
+    text-shadow: 
+        0 0 10px rgba(255, 0, 0, 0.8),
+        0 0 20px rgba(255, 0, 0, 0.6),
+        0 0 40px rgba(255, 0, 0, 0.5),
+        0 0 80px rgba(255, 0, 0, 0.4);
+    
+    padding: 20px 50px;
+    margin: 20px;
+    border-radius: 20px;
+
+    /* 🔥 Animation กระพริบ */
+    animation: glow 1.5s infinite alternate;
+}
+
+/* ✨ Animation ไฟกระพริบ */
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 10px rgba(255, 0, 0, 0.8),
+            0 0 20px rgba(255, 0, 0, 0.6),
+            0 0 40px rgba(255, 0, 0, 0.5),
+            0 0 80px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        text-shadow: 
+            0 0 15px rgba(255, 50, 50, 0.9),
+            0 0 30px rgba(255, 50, 50, 0.7),
+            0 0 60px rgba(255, 50, 50, 0.6),
+            0 0 120px rgba(255, 50, 50, 0.5);
+    }
+}
+
+/* ✅ Responsive Design ให้รองรับทุกขนาดจอ */
+@media (max-width: 768px) {
+    .og {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .og {
+        font-size: 50px;
+    }
 }
